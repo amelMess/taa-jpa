@@ -1,5 +1,6 @@
 package web.rest;
 
+import io.swagger.annotations.Api;
 import repository.EmployeeRepository;
 
 import javax.ws.rs.GET;
@@ -10,6 +11,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 @Path("/employee")
+@Api(value="/employee", description = "Employee resource")
 public class EmployeeResource {
 
     private EmployeeRepository employeeRepository = new EmployeeRepository();
